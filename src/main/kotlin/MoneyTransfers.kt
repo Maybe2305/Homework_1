@@ -1,12 +1,13 @@
 fun main() {
     val minPriceForCommission = 35
     val commission = 0.0075
-    val amount: Double = 1000.0
-    val sumCommission = amount * commission
-    val result = if (amount > minPriceForCommission) amount - sumCommission else amount
-    val resultCommission = amount - result
+    val amount: Double = 10000.0
+    val commissionForTransfer = if (amount * commission > minPriceForCommission)
+        amount * commission else minPriceForCommission
 
-    println("Комиссия составит: $resultCommission руб.")
+
+
+    println("Комиссия составит: $commissionForTransfer руб.")
 }
 
 
